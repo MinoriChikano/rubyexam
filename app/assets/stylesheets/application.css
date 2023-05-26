@@ -1,0 +1,25 @@
+html {
+    font-size: 95%;
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    background-color: yellowgreen;
+    
+  }
+
+  .header {
+    background-color: yellowgreen;
+    height: 60px;
+    text-align: center
+  }
+
+  
+
+  .footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center
+  }
