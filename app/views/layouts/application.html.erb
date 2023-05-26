@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <header class="header clearfix">
+      <h1>ひとりごと</h1>
+    </header>
+
     <%= yield %>
+
+    <footer class="footer">
+      <%= link_to "ひとりごと一覧に戻る", posts_path %>
+      <p>⚡️プログラミング修行僧💻</p>
+    </footer>
   </body>
 </html>
