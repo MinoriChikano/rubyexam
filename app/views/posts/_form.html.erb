@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./stylesheets/application.css">
+    <title>つぶやきアプリ</title>
+</head>
+<body>
+  <header class="header clearfix">
+    <h1>ひとりごと</h1>
+  </header
+
+<%= form_with(model: @post, local: true,url: choose_new_or_edit ) do |form| %>
+    <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2>エラー!!</h2>
+      <ul>
+
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="post_content">
+      <%= form.label :content %>
+      <%= form.text_field :content %>
+    </div>
+    <%= form.submit %>
+  <% end %>
+
+ 
+  <footer class="footer">
+      <%= link_to "ひとりごと一覧に戻る", posts_path %>
+      <p>⚡️プログラミング修行僧💻</p>
+  </footer>
+</body>
+</html>
